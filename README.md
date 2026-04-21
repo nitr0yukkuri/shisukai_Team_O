@@ -1,7 +1,7 @@
 # github の基本操作方法
 作業する前にすること
 クローン(コードのコピー)
-git clone https://github.com/nitr0yukkuri/umekita_tech_base
+git clone https://github.com/nitr0yukkuri/shisukai_Team_O/
 → 現時点のGitHubにあるコードをローカルにコピーする
 
 プル(既に存在してるコードを読み込み)
