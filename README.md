@@ -1,4 +1,4 @@
-github の基本操作方法
+# github の基本操作方法
 作業する前にすること
 クローン(コードのコピー)
 git clone https://github.com/nitr0yukkuri/umekita_tech_base
