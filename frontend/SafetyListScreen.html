@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>社員一覧画面</title>
+    <title>社員安否一覧</title>
     <link rel="stylesheet" href="./css/EmployeeListScreen.css">
 </head>
 
@@ -12,7 +12,7 @@
 
     <div class="app-container">
         <header>
-            <h1>社員一覧</h1>
+            <h1>社員安否一覧</h1>
             <div class="user-info"><img src="../image/Vector.png" alt="ユーザー" class="user-icon"> ユーザー名</div>
         </header>
 
@@ -20,7 +20,7 @@
             <aside class="sidebar">
                 <button type="button" onclick="location.href='frontwebsite1.html'">メニュー画面へ</button>
                 <button class="active" type="button" onclick="location.href='EmployeeDetailScreen.html'">社員詳細</button>
-                <button type="button" onclick="location.href='SafetyListScreen.html'">社員安否一覧</button>
+                <button type="button" onclick="location.href='EmployeeListScreen.html'">社員一覧へ</button>
                 <button>&nbsp;</button>
                 <button>&nbsp;</button>
                 <button>&nbsp;</button>
@@ -32,11 +32,11 @@
                 <div class="search-form">
                     <div class="input-group">
                         <label>社員名</label>
-                        <input type="text" id="searchName" placeholder="🔍">
+                        <input type="text" placeholder="🔍">
                     </div>
                     <div class="input-group">
                         <label>社員番号</label>
-                        <input type="text" id="searchId" placeholder="🔍">
+                        <input type="text" placeholder="🔍">
                     </div>
                 </div>
 
@@ -48,7 +48,27 @@
                                 <th>社員番号</th>
                             </tr>
                         </thead>
-                        <tbody id="employeeList">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -56,9 +76,6 @@
         </div>
     </div>
 
-    <script src="./js/EmployeeListScreen.js"></script>
 </body>
-
-
 
 </html>
