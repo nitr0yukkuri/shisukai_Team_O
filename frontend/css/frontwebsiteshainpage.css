@@ -108,13 +108,12 @@ main {
 
 .container .box h2 {
     position: static;
-    font-size: 1.8em;
+    font-size: 1.65em;
     font-weight: 900;
     transition: 0.3s;
 }
 
 .container .box:nth-child(2) h2 {
-    font-size: 1.5em;
     white-space: nowrap;
 }
 
