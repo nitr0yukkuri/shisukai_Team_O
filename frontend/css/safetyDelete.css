@@ -11,6 +11,11 @@ body {
     min-height: 100vh;
 }
 
+main {
+    width: 420px;
+    margin: 20px auto 0;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -21,16 +26,20 @@ header {
     background-color: rgba(0, 0, 0, 0.4); /* ヘッダーだけ少し暗くして文字を読みやすく */
 }
 
+h1 {
+    font-size: 1.8em;
+}
+
 table {
-    width: calc(100% - 40px); 
+    width: 100%; 
     border-collapse: collapse;
-    margin: 20px 20px; 
+    margin: 20px 0; 
     background-color: aliceblue;
 }
 
 th, td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 10px;
     text-align: left;
 }
 
