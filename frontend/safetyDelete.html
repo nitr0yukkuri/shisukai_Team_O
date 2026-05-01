@@ -8,11 +8,12 @@
 </head>
 <body>
     <header>
-        <h3>メニュー画面へ</h3>
+        <h3><a href="a">メニュー画面へ</a></h3>
         <h1>安否情報削除</h1>
-        <h3>ログイン画面へ</h3>
+        <h3><a href="a">ログイン画面へ</a></h3>
     </header>
     <main>
+        
         <table>
             <thead>
                 <tr>
@@ -23,6 +24,7 @@
                     <th>削除</th>
                 </tr>
             </thead>
+
             <tbody>
                 <!-- PHPで安否情報を表示する -->
                  <tr>
@@ -30,7 +32,7 @@
                     <td>い</td>
                     <td>う</td>
                     <td>え</td>
-                    <td><button type="button" onclick="deleteSafetyInfo()">削除</button></td>
+                     <td><button  class="delete-btn" type="button" onclick="deleteSafetyInfo()">削除</button></td>  <!--  削除ボタンを押したときの処理もPHPで実装する必要があります。関数名はdeleteSafetyInfoです。 -->
                  </tr>
             </tbody>
         </table>
