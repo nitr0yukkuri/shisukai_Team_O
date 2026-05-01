@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    /* ブラウザが勝手につける隙間をゼロにして、コントロールしやすくする */
+    margin: 0;
+    padding: 0;
+    
+    background-image: url('../images/backphoto01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px; /* 少し広めにしてゆとりを持たせる */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4); /* ヘッダーだけ少し暗くして文字を読みやすく */
+}
+
+table {
+    width: calc(100% - 40px); 
+    border-collapse: collapse;
+    margin: 20px 20px; 
+    background-color: aliceblue;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+/* 削除ボタン */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049; /* マウスを乗せた時の色 */
+}
+
+/*テーブル削除欄の設定*/
+td:last-child, th:last-child {
+    width: 1px;
+    white-space: nowrap; 
+    text-align: center;  
+}
