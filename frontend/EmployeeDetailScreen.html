@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>社員一覧画面</title>
+    <title>社員詳細</title>
     <link rel="stylesheet" href="./css/EmployeeListScreen.css">
 </head>
 
@@ -12,14 +12,14 @@
 
     <div class="app-container">
         <header>
-            <h1>社員一覧</h1>
+            <h1>社員詳細</h1>
             <div class="user-info"><img src="../image/Vector.png" alt="ユーザー" class="user-icon"> ユーザー名</div>
         </header>
 
         <div class="main-content">
             <aside class="sidebar">
                 <button type="button" onclick="location.href='frontwebsite1.html'">メニュー画面へ</button>
-                <button class="active" type="button" onclick="location.href='EmployeeDetailScreen.html'">社員詳細</button>
+                <button class="active" type="button" onclick="location.href='EmployeeListScreen.html'">社員一覧へ</button>
                 <button type="button" onclick="location.href='SafetyListScreen.html'">社員安否一覧</button>
                 <button>&nbsp;</button>
                 <button>&nbsp;</button>
@@ -32,11 +32,11 @@
                 <div class="search-form">
                     <div class="input-group">
                         <label>社員名</label>
-                        <input type="text" id="searchName" placeholder="🔍">
+                        <input type="text" placeholder="🔍">
                     </div>
                     <div class="input-group">
                         <label>社員番号</label>
-                        <input type="text" id="searchId" placeholder="🔍">
+                        <input type="text" placeholder="🔍">
                     </div>
                 </div>
 
@@ -44,11 +44,31 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>社員名</th>
-                                <th>社員番号</th>
+                                <th>項目</th>
+                                <th>内容</th>
                             </tr>
                         </thead>
-                        <tbody id="employeeList">
+                        <tbody>
+                            <tr>
+                                <td>社員名</td>
+                                <td>山田 太郎</td>
+                            </tr>
+                            <tr>
+                                <td>社員番号</td>
+                                <td>1001</td>
+                            </tr>
+                            <tr>
+                                <td>部署</td>
+                                <td>総務部</td>
+                            </tr>
+                            <tr>
+                                <td>現在地</td>
+                                <td>本社</td>
+                            </tr>
+                            <tr>
+                                <td>安否</td>
+                                <td>無事</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -56,9 +76,6 @@
         </div>
     </div>
 
-    <script src="./js/EmployeeListScreen.js"></script>
 </body>
-
-
 
 </html>
