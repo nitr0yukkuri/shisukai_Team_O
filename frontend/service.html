@@ -52,9 +52,27 @@
                     </div>
                     <h2>安否詳細</h2>
                 </a>
+
+                <div class="service" onclick="promptAdminPassword()" style="cursor: pointer;">
+                    <div class="icon">
+                        <i class="bx bx-shield-lock"></i>
+                    </div>
+                    <h2>管理者専用画面</h2>
+                </div>
             </div>
         </section>
     </main>
+
+    <script>
+        function promptAdminPassword() {
+            const password = prompt('管理者専用画面へのアクセスにはパスワードが必要です。\nパスワードを入力してください:');
+            if (password === 'admin') {
+                window.location.href = 'frontwebsite1.html';
+            } else if (password !== null) {
+                alert('パスワードが正しくありません。');
+            }
+        }
+    </script>
 </body>
 
 </html>
