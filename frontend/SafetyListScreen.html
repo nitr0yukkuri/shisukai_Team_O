@@ -18,7 +18,7 @@
 
         <div class="main-content">
             <aside class="sidebar">
-                <button type="button" onclick="location.href='frontwebsite1.html'">メニュー画面へ</button>
+                <button type="button" onclick="goToMenu()">メニュー画面へ</button>
                 <button class="active" type="button" onclick="location.href='EmployeeDetailScreen.html'">社員詳細</button>
                 <button type="button" onclick="location.href='EmployeeListScreen.html'">社員一覧へ</button>
                 <button>&nbsp;</button>
@@ -76,6 +76,16 @@
         </div>
     </div>
 
+    <script>
+        function goToMenu() {
+            const password = prompt('メニュー画面へのアクセスにはパスワードが必要です。\nパスワードを入力してください:');
+            if (password === 'admin') {
+                window.location.href = 'frontwebsiteAdminLogin.html';
+            } else if (password !== null) {
+                alert('パスワードが正しくありません。');
+            }
+        }
+    </script>
 </body>
 
 </html>
