@@ -59,12 +59,7 @@
     <script src="./js/EmployeeListScreen.js"></script>
     <script>
         function goToMenu() {
-            const password = prompt('メニュー画面へのアクセスにはパスワードが必要です。\nパスワードを入力してください:');
-            if (password === 'admin') {
-                window.location.href = 'frontwebsiteAdminLogin.html';
-            } else if (password !== null) {
-                alert('パスワードが正しくありません。');
-            }
+            window.location.href = 'frontwebsiteAdminLogin.html';
         }
     </script>
 </body>
