@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/frontwebsitelogin.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Admin Login</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="admin_login.php" method="POST">
+            <h1>ADMIN LOGIN</h1>
+
+            <div class="input-box">
+                <input type="text" name="employee_id" placeholder="社員番号" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" placeholder="パスワード" required>
+            </div>
+
+            <button type="submit" class="btn">ログイン</button>
+
+            <div class="register-link">
+                <a href="login.html">ユーザーログイン</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

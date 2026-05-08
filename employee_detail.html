@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社員詳細</title>
+    <link rel="stylesheet" href="./css/EmployeeListScreen.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>社員詳細</h1>
+            <div class="user-info"><img src="../image/Vector.png" class="user-icon"> ユーザー名</div>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <button type="button" onclick="goToMenu()">メニュー画面へ</button>
+                <button class="active" type="button" onclick="location.href='Employee_List.html'">社員一覧へ</button>
+                <button type="button" onclick="location.href='SafetyListScreen.html'">社員安否一覧</button>
+            </aside>
+
+            <main class="content">
+                <h2>社員検索・一覧</h2>
+
+                <div class="search-form">
+                    <div class="input-group">
+                        <label>社員名</label>
+                        <input type="text" id="searchName" placeholder="🔍">
+                    </div>
+                    <div class="input-group">
+                        <label>社員番号</label>
+                        <input type="text" id="searchId" placeholder="🔍">
+                    </div>
+
+                    
+                    <button onclick="searchEmployee()">検索</button>
+                </div>
+
+                <div class="list-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>項目</th>
+                                <th>内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>社員名</td>
+                                <td id="emp_name">---</td>
+                            </tr>
+                            <tr>
+                                <td>社員番号</td>
+                                <td id="emp_id">---</td>
+                            </tr>
+                            <tr>
+                                <td>役割</td>
+                                <td id="emp_role">---</td>
+                            </tr>
+                            <tr>
+                                <td>安否</td>
+                                <td id="emp_safety">---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+  
+  <script>
+    function goToMenu() {
+        window.location.href = 'service.html';
+    }
+
+    function searchEmployee() {
+        const name = document.getElementById("searchName").value;
+        const id = document.getElementById("searchId").value;
+
+        fetch(`get_employee_detail.php?name=${name}&id=${id}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data) {
+                    alert("該当する社員が見つかりません。");
+                    return;
+                }
+
+                document.getElementById("emp_name").innerText = data.employee_name;
+                document.getElementById("emp_id").innerText = data.employee_id;
+                document.getElementById("emp_role").innerText = data.role;
+                document.getElementById("emp_safety").innerText = data.safety_status ?? "未報告";
+            });
+    }
+</script>
+
+
+</body>
+</html>

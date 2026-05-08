@@ -1,0 +1,48 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['employee_id'])) {
+    header("Location: login.html");
+    exit;
+}
+
+$employee_name = $_SESSION['employee_name'];
+?>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安否報告</title>
+    <link rel="stylesheet" href="css/safety_report.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2 class="title">安否報告フォーム</h2>
+        <p class="subtitle">報告者：<?php echo $employee_name; ?></p>
+
+        <form action="submit_report.php" method="POST" class="report-form">
+
+            <h3>本人安否</h3>
+            <label><input type="radio" name="safety_status" value="安全" required> 安全</label>
+            <label><input type="radio" name="safety_status" value="軽傷"> 軽傷</label>
+            <label><input type="radio" name="safety_status" value="重傷"> 重傷</label>
+
+            <h3>出社可否</h3>
+            <label><input type="radio" name="can_commute" value="1" required> 出勤可能</label>
+            <label><input type="radio" name="can_commute" value="0"> 出勤不可</label>
+
+            <h3>コメント（任意）</h3>
+            <textarea name="comment" rows="4" placeholder="自由に記入してください"></textarea>
+
+            <button type="submit" class="submit-btn">報告する</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

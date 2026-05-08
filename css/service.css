@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("../image/backphoto01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    background: #020c59a5;
+}
+
+.title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.title a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.title .user {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.title .user i {
+    font-size: 20px;
+    color: white;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(13, 79, 141);
+    padding: 30px 20px;
+    font-weight: 700;
+}
+
+.our-service {
+    margin-top: 120px;
+}
+
+.our-service h1 {
+    text-transform: uppercase;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+.container {
+    width: min(980px, 90%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service {
+    text-align: center;
+    border-radius: 20px;
+    width: 280px;
+    margin: 0;
+    background-color: #fff;
+    padding: 40px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: 0.4s ease;
+    text-decoration: none;
+    color: black;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(75, 169, 209);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 0;
+}
+
+.icon i {
+    color: white;
+    font-size: 24px;
+}
+
+.service:hover {
+    background-color: rgb(75, 169, 209);
+    transform: translateY(-3px);
+}
+
+.service:hover h2,
+.service:hover i {
+    color: white;
+}
+
+.service i {
+    font-size: 48px;
+    color: black;
+}
+
+.service h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+}
